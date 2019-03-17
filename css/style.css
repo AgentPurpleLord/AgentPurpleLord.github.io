@@ -1,11 +1,13 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Poppins:100,500,700,700i|Work+Sans:300,400,700&subset=devanagari,latin-ext');
-
-html {
-    overflow-x: hidden;
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 .navbar {
     background: linear-gradient(#1C638E -10%, 10%, rgba(0,0,0,0));
     width: 100%;
+    padding-top: 10px;
 }
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
@@ -57,10 +59,7 @@ p {
 #home .bgimg.replace {
 
 }
-html, body {
-    height: 100%;
-    width: 100%;
-}
+
 .landing-text {
     display: table-cell;
     text-align: left;
@@ -73,8 +72,8 @@ html, body {
 .landing-text h1 {
     font-family: 'Poppins', sans-serif;
     color: #F1F1F7;
-    font-size: 400%;
-    font-weight: 700;
+    font-size: 300%;
+    font-weight: 500;
 }
 .landing-text h3 {
     font-family: 'Poppins', sans-serif;
@@ -253,6 +252,12 @@ div.insta {
     position: relative;
 }
 @media (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        width: 100%;
+        padding-top: 30px;
+    }
+
     .landing-text h1 {
         font-size: 300%;
     }
