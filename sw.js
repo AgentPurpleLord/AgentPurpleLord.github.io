@@ -12,6 +12,13 @@
  */
 
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.1.1/workbox-sw.js");
+
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
+
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
  * requests for URLs in the manifest.
@@ -60,7 +67,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/img/drink-mobile.jpg",
-    "revision": "130d8db99effeb86dcf7861ac725f3ba"
+    "revision": "ada254977c21f17f62eae34e9ac18332"
   },
   {
     "url": "assets/img/drink-tiny.jpg",
@@ -72,7 +79,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/img/jedi-mobile.jpg",
-    "revision": "6ee3c5756b2d9ce0f137cfd5f4910150"
+    "revision": "05d920f03b08820980335ddb132edc51"
   },
   {
     "url": "assets/img/jedi-tiny.jpg",
@@ -88,11 +95,11 @@ self.__precacheManifest = [
   },
   {
     "url": "css/style.css",
-    "revision": "bac62708e96c7c42145abca3d0eaf6a8"
+    "revision": "eac8c836229537273fc3b0a0512f74fc"
   },
   {
     "url": "index.html",
-    "revision": "7c0e87238e205fb0b0d3b6c41ec69ae9"
+    "revision": "6ddef9b73af703a97216e83aeec606db"
   },
   {
     "url": "js/typewriter.js",
@@ -340,15 +347,15 @@ self.__precacheManifest = [
   },
   {
     "url": "pages/site-construct.html",
-    "revision": "1371989ec9b49801a5a505edd70e43d1"
+    "revision": "653873dcd05725bfe1a80dee72fa53a4"
   },
   {
-    "url": "sw_old.js",
-    "revision": "0b512e584abdc34c0b4c3e25810a8857"
+    "url": "robots.txt",
+    "revision": "d41d8cd98f00b204e9800998ecf8427e"
   },
   {
     "url": "workbox-config.js",
-    "revision": "5ff71eb4ceaffb53769cc946b8a2fbe5"
+    "revision": "4e08ecc74e1396b847beda9dd83426e9"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

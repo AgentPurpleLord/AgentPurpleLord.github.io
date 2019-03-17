@@ -2,7 +2,7 @@
 html, body {
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .navbar {
     background: linear-gradient(#1C638E -10%, 10%, rgba(0,0,0,0));
@@ -266,6 +266,18 @@ div.insta {
         object-fit: cover;
         margin-top: 0%;
         margin-left: calc(0% - 0px);
+    }
+    .container-fluid{
+        padding: 20px;
+    }
+    .paddsection{
+        padding-bottom: 10px;
+    }
+    #services {
+        padding-bottom: 10px;
+    }
+    #about{
+        padding-top: 10px;
     }
 }
 @media (max-width: 600px){
