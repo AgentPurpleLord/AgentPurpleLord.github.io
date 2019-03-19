@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\css"
+    "\\assets\\brand",
+    "\\css",
+    "\\js",
+    "\\pages",
+    "\\_layouts",
+    "\\_portfolio"
   ],
+  "SelectedNode": "\\_layouts\\default-white.html",
   "PreviewInSolutionExplorer": false
 }

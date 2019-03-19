@@ -1,0 +1,4 @@
+baseurl: /
+collections:
+  portfolio:
+    output: true

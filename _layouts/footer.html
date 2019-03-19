@@ -1,0 +1,83 @@
+---
+layout: head
+---
+<html>
+<body class="animsition">
+    {{ content }}
+    <footer id="footer">
+        <div class="row d-flex justify-content-center">
+            <div class="social-btn">
+                <a rel="noopener" href="https://www.instagram.com/wampa_stomper/" aria-label="Instagram" target="_blank">
+                    <div class="social insta">
+                        <i class="fab fa-instagram fa-2x w-1"></i>
+                        <span class="w-1">Instagram</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <p>© COPYRIGHT DONT STEAL OMG</p>
+        </div>
+    </footer>
+    <script>
+        progressively.init({
+            delay: 50,
+            throttle: 300,
+            smBreakpoint: 600,
+            onLoad: function (elem) {
+                console.log(elem);
+            },
+            onLoadComplete: function () {
+                console.log('All images have finished loading!');
+            }
+        });
+    </script>
+    <!-- <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>-->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <script src="../js/iso.js"></script>
+    <script src="../js/animsition.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".animsition").animsition({
+                inClass: 'fade-in',
+                outClass: 'fade-out',
+                inDuration: 1500,
+                outDuration: 800,
+                linkElement: '.animsition-link',
+                // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+                loading: true,
+                loadingParentElement: 'body', //animsition wrapper element
+                loadingClass: 'animsition-loading',
+                loadingInner: '', // e.g '<img src="loading.svg" />'
+                timeout: false,
+                timeoutCountdown: 5000,
+                onLoadEvent: true,
+                browser: ['animation-duration', '-webkit-animation-duration'],
+                // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+                // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+                overlay: false,
+                overlayClass: 'animsition-overlay-slide',
+                overlayParentElement: 'body',
+                transition: function (url) { window.location.href = url; }
+            });
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        window.addEventListener('load',AOS.refresh)
+    </script>
+</body>
+</html>

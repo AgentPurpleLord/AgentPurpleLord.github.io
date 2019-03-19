@@ -5,6 +5,11 @@
       "taskName": "task-index",
       "appliesTo": "index.html",
       "type": "launch"
+    },
+    {
+      "taskName": "task-default",
+      "appliesTo": "_layouts/default.html",
+      "type": "launch"
     }
   ]
 }
