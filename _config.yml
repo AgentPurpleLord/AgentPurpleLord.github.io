@@ -1,4 +1,4 @@
-destination: C:\Users\Nathan Haymes\source\repos\AgentPurpleLord.github.io\docs
+destination: ./docs
 baseurl: /
 collections:
   portfolio:
