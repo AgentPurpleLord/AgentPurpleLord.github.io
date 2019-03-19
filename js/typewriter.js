@@ -39,6 +39,19 @@ TxtType.prototype.tick = function () {
     }, delta);
 };
 
+function toggleActive(filters, active) {
+    if (filters) {
+        mrUtil.forEach(filters, (index, filter) => {
+            if (filter && typeof filter.classList !== typeof undefined) {
+                if (active) {
+                    filter.classList.add(Css.ACTIVE);
+                } else { filter.classList.remove(Css.ACTIVE); }
+            }
+        });
+    }
+};
+
+
 window.onload = function () {
     var elements = document.getElementsByClassName('typewrite');
     for (var i = 0; i < elements.length; i++) {

@@ -1,0 +1,41 @@
+---
+layout: page
+title: Gallery
+description: A place for pictures to be shared.
+---
+<section class="gallery">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col col-md-auto portfolio-filter">
+                <ul class="nav filter">
+                    <li class="nav-item active" data-filter="*">
+                        <a href="#" class="sub-link" >All</a>
+                    </li>
+                    <li class="nav-item data-filter=".Photoshoot"">
+                        <a href="#" class="sub-link" >Photoshoot</a>
+                    </li>
+                    <li class="nav-item" data-filter=".Category-2">
+                        <a href="#" class="sub-link" >Category 2</a>
+                    </li>
+                    <li class="nav-item" data-filter=".Art-Direction">
+                        <a href="#" class="sub-link" >Art Direction</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container-fluid">
+                <div class="row all-portfolios grid">
+                    <div class="grid-sizer col-xs-6 col-sm-4 col-md-3"></div>
+                    {% for item in site.portfolio %}
+                    <div class="grid-item col-xs-6 col-sm-8 col-md-6 single-portfolio {{ item.category }}">
+                        <a class="grid-item-content" href="{{ item.url }}">
+                            <img data-aos="fade-up" src="{{ item.cover }}" class="rounded img-responsive" alt="{{ item.project_name }}" />
+                            <h4 class="h4 p-h w-1">{{ item.project_name }}</h4>
+                            <p class="y-1">{{ item.category }}</p>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
