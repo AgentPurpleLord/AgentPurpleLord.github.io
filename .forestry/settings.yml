@@ -15,19 +15,17 @@ sections:
   label: Portfolio
   create: all
   match: "**/*"
-  templates:
-  - gallery
-upload_dir: docs/assets/uploads
+upload_dir: assets/uploads
 public_path: "/assets/uploads"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":month:/:filename:"
 build:
-  preview_command: bundle exec jekyll build --drafts --unpublished --future -d docs
-  publish_command: bundle exec jekyll build --destination docs
+  preview_command: bundle exec jekyll build --drafts --unpublished --future -d _site
+  publish_command: bundle exec jekyll build -d _site
   preview_env:
   - JEKYLL_ENV=staging
   publish_env:
   - JEKYLL_ENV=production
   preview_output_directory: "/docs"
-  output_directory: "/docs"
+  output_directory: _site
