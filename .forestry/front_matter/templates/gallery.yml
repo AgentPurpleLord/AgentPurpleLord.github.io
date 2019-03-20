@@ -60,3 +60,5 @@ fields:
   name: gallery
   label: gallery
   description: The images that show up inside the page.
+pages:
+- _portfolio/AnExampleProject.md
