@@ -1,5 +1,5 @@
 destination: ./docs
-baseurl: /
+baseurl: wampastomper.com/
 collections:
   portfolio:
     output: true
