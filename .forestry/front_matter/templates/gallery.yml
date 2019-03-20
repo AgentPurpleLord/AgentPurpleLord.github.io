@@ -1,7 +1,6 @@
 ---
-label: Gallery
+label: gallery
 hide_body: false
-display_field: project_name
 fields:
 - type: text
   name: layout
@@ -57,3 +56,9 @@ fields:
   name: credits
   label: Credits
   description: Who did what
+- type: image_gallery
+  name: gallery
+  label: gallery
+  description: The images that show up inside the page.
+pages:
+- _portfolio/AnExampleProject.md
