@@ -56,3 +56,7 @@ fields:
   name: credits
   label: Credits
   description: Who did what
+- type: image_gallery
+  name: gallery
+  label: gallery
+  description: The images that show up inside the page.
