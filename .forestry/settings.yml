@@ -24,7 +24,7 @@ use_front_matter_path: false
 file_template: ":month:/:filename:"
 build:
   preview_command: bundle exec jekyll build --drafts --unpublished --future -d docs
-  publish_command: bundle exec jekyll build -d docs
+  publish_command: bundle exec jekyll build --destination docs
   preview_env:
   - JEKYLL_ENV=staging
   publish_env:

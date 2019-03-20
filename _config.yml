@@ -1,4 +1,3 @@
-destination: ./docs
 collections:
   portfolio:
     output: true
