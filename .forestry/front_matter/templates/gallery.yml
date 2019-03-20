@@ -1,7 +1,6 @@
 ---
-label: Gallery
+label: gallery
 hide_body: false
-display_field: project_name
 fields:
 - type: text
   name: layout
