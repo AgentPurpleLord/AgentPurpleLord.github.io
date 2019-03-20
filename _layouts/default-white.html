@@ -15,7 +15,7 @@ layout: footer
                 {% for item in site.data.navigation %}
                 {% if page.url == item.url %}
                 <li class="nav-item">
-                    <a class="nav-link b-0 animsition-link" href="{{ site.url }}{{ item.url }}">{{ item.title }}</a>
+                    <a class="nav-link b-0 animsition-link" href="{{ item.url }}">{{ item.title }}</a>
                 </li>
                 {% else %}
                 <li class="nav-item">
