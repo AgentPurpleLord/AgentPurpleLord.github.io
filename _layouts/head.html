@@ -37,13 +37,13 @@
 
     {% if page.date %}
       <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
-      <meta content="{{site.url}}/about/" property="article:author">
+      <meta content="{{site.url}}about/" property="article:author">
     {% endif %}
 
     {% if page.image %}
-      <meta content="{{site.url}}/assets/img/{{ page.image }}" property="og:image">
+      <meta content="{{site.url}}assets/img/{{ page.image }}" property="og:image">
     {% else %}
-      <meta content="{{site.url}}/assets/brand/favicon-512x.png" property="og:image">
+      <meta content="{{site.url}}assets/brand/wampa-full.png" property="og:image">
     {% endif %}
 
     <meta name="description" content="{{ page.description }}">
