@@ -1,4 +1,59 @@
 ---
 label: Gallery
 hide_body: false
-fields: []
+display_field: project_name
+fields:
+- type: text
+  name: layout
+  label: Layout
+  hidden: true
+  config:
+    required: true
+  default: portfolio
+- type: text
+  name: project_name
+  label: Project Name
+  description: The main name of the shoot, this shows up in both the gallery and the
+    page
+  config:
+    required: true
+- type: file
+  name: cover_image
+  label: Cover Image
+  description: The image that will show up in the main galleries page
+  config:
+    maxSize: '1'
+- type: select
+  name: category
+  config:
+    source:
+      type: simple
+    required: true
+    options:
+    - Photoshoot
+    - WIP
+    - Event
+  label: Category
+  description: Category in the main galleries page
+  default: Photoshoot
+- type: text
+  name: character
+  label: Character
+  description: What character were you dressed up as?
+- type: text
+  name: location
+  label: Location
+  description: Where were you?
+- type: textarea
+  name: description
+  label: Description
+  description: Give your long and drawn out version of events
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+  hidden: false
+- type: textarea
+  name: credits
+  label: Credits
+  description: Who did what
