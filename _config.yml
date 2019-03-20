@@ -1,4 +1,5 @@
 url: https://wampastomper.com/
+permalink: /:title/
 collections:
   portfolio:
     output: true
