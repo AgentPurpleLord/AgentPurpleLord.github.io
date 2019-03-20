@@ -76,11 +76,8 @@ layout: default-white
                 </div>
             </div>
             <div class="col-lg-7 order-lg-1 portfolio-images">
-                {% capture gallery_path %}assets/gallery/{{ page.gallery-key }}{% endcapture %}
-                {% for image in site.static_files %}
-                  {% if image.path contains gallery_path %}
-                    <img data-aos="fade-up" class="rounded mb-3 img-responsive" src="{{ image.path }}" alt="{{ image.title }}" />
-                  {% endif %}
+                {% for image in page.gallery %}
+                    <img data-aos="fade-up" class="rounded mb-3 img-responsive" src="{{ image | relative_url }}" alt="{{ image.name }}" />
                 {% endfor %}
             </div>
         </div>

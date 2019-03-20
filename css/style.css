@@ -338,6 +338,7 @@ div.insta {
     height: 90%;
     width: 100%;
     position: relative;
+    background-image: url('../assets/img/jedi.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -422,7 +423,10 @@ div.insta {
 
 @media (max-width: 768px) {
     .padding-100{
-        padding: 0px 50px;
+        padding: 0px 5px;
+    }
+    .lead{
+        font-size: 1.5em;
     }
     .navbar {
         position: fixed;
@@ -432,8 +436,12 @@ div.insta {
     .container {
         max-width: 720px;
     }
-    .h1 {
-        font-size: 300%;
+    h1 {
+        font-size: 1.7em;
+    }
+    h3 {
+        font-size: 1.3em;
+        font-weight: 400;
     }
     .about .div-img-bg {
         padding: 0;
@@ -454,6 +462,9 @@ div.insta {
     }
     .about{
         padding-top: 10px;
+    }
+    .nav-link {
+        padding-top: 25px;
     }
 }
 @media (max-width: 600px){

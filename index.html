@@ -1,13 +1,29 @@
 ---
 layout: hero
-title: Home Page
+title: Home
 description: A place for costumers to unite and fight evil.
+hero_subheader: Adventures in Costume. Melbourne.
+about_header: Who Am I?
+about_body: Hi! I’m Lara. I’m a science student who by night and weekends loves to make costumes and dress up as my favourite characters. I learned to sew my own clothes in primary school and never lost my love of halloween and dress up days, so discovering cosplay was an epiphany for me. At first I was very shy and self conscious, but I persevered and am proud to have learned many new skills, made heaps of awesome friends and had amazing opportunities. I can’t wait to see where cosplay takes me next!
+services:
+  - name: Commissions
+    icon: fas fa-magic
+    body: Many costumes require extra special details to bring them to life. I've worked with leather, resin, lights and silicone - whatever it takes to make something that's out of this world!
+  - name: Cosplay
+    icon: fas fa-hat-wizard
+    body: I frequent pop-culture and comic conventions in Melbourne and I hope to see you at one soon! These are a great opportunity to bring out an A-game costume or remake the entire cast of a series with friends.
+  - name: Photoshoots
+    icon: fas fa-camera-retro
+    body: There are many friendly and talented photographers in Melbourne who are prepared to scale cliffs, descend waterfalls and get utterly lost in the mountains to capture the perfect photo. I am always ready to plan the next adventure with anyone who’d like to join me.
+  - name: Events
+    icon: fas fa-calendar-check
+    body: One of the best parts of cosplay is seeing the reaction people coming face to face with their favourite character, especially kids! I have attended close to 50 charity events already, please get in touch if you think your next event could use more superheroes!
 ---
-<div class="hero progressive__bg progressive--not-loaded" data-progressive="assets/img/jedi.jpg" data-progressive-sm="assets/img/jedi-mobile.jpg" style="background-image: url('assets/img/jedi-tiny.jpg');}">
+<div class="hero">
     <h1 class="typewrite w-1" data-period="2000" data-type='[ "HI, I&#39M WAMPA STOMPER.", "I&#39M A COSPLAYER.", "I&#39M A SEAMSTRESS.", "I&#39M A JEDI TOO."]'>
         <span class="wrap"></span>
     </h1>
-    <h3 class="w-1">Adventures in Costume. Melbourne.</h3>
+    <h3 class="w-1">{{ page.hero_subheader }}</h3>
     <a rel="noopener" href="https://www.instagram.com/wampa_stomper/" aria-label="Instagram" target="_blank"><span class="hero-icons"><i class="fab fa-instagram w-1"></i></span></a>
 </div>
 <div class="padding-100 bg-blue about">
@@ -22,8 +38,8 @@ description: A place for costumers to unite and fight evil.
             </div>
             <div class="col-lg-7">
                 <div class="about-descr">
-                    <h2 class="y-0">Who Am I?</h2>
-                    <p class="lead w-1">Hi! I’m Lara. I’m a science student who by night and weekends loves to make costumes and dress up as my favourite characters. I learned to sew my own clothes in primary school and never lost my love of halloween and dress up days, so discovering cosplay was an epiphany for me. At first I was very shy and self conscious, but I persevered and am proud to have learned many new skills, made heaps of awesome friends and had amazing opportunities. I can’t wait to see where cosplay takes me next!</p>
+                    <h2 class="y-0">{{ page.about_header }}</h2>
+                    <p class="lead w-1">{{ page.about_body }}</p>
                 </div>
             </div>
         </div>
@@ -32,26 +48,13 @@ description: A place for costumers to unite and fight evil.
 <div class="padding-100 bg-blue services">
     <div class="container-fluid">
         <div class="row">
+            {% for item in page.services %}
             <div data-aos="fade-up" class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <i class="fas fa-magic y-0"></i>
-                <h5 class="y-0">Commissions</h5>
-                <p class="w-1">Many costumes require extra special details to bring them to life. I've worked with leather, resin, lights and silicone - whatever it takes to make something that's out of this world!</p>
+                <i class="{{ item.icon }} y-0"></i>
+                <h5 class="y-0">{{ item.name }}</h5>
+                <p class="w-1">{{ item.body }}</p>
             </div>
-            <div data-aos="fade-up" class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <i class="fas fa-hat-wizard y-0"></i>
-                <h5 class="y-0">Cosplay</h5>
-                <p class="w-1">I frequent pop-culture and comic conventions in Melbourne and I hope to see you at one soon! These are a great opportunity to bring out an A-game costume or remake the entire cast of a series with friends.</p>
-            </div>
-            <div data-aos="fade-up" class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <i class="fas fa-camera-retro y-0"></i>
-                <h5 class="y-0">Photoshoots</h5>
-                <p class="w-1">There are many friendly and talented photographers in Melbourne who are prepared to scale cliffs, descend waterfalls and get utterly lost in the mountains to capture the perfect photo. I am always ready to plan the next adventure with anyone who’d like to join me. </p>
-            </div>
-            <div data-aos="fade-up" class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <i class="fas fa-calendar-check y-0"></i>
-                <h5 class="y-0">Events</h5>
-                <p class="w-1">One of the best parts of cosplay is seeing the reaction people coming face to face with their favourite character, especially kids! I have attended close to 50 charity events already, please get in touch if you think your next event could use more superheroes!</p>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </div>
