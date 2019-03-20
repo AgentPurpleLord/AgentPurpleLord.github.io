@@ -28,7 +28,7 @@ description: A place for pictures to be shared.
                     {% for item in site.portfolio %}
                     <div class="grid-item col-xs-6 col-sm-8 col-md-6 single-portfolio {{ item.category }}">
                         <a class="grid-item-content" href="{{ item.url }}">
-                            <img data-aos="fade-up" src="{{ item.image | relative_url }}" class="rounded img-responsive" alt="{{ item.project_name }}" />
+                            <img data-aos="fade-up" src="{{ item.cover_image | relative_url }}" class="rounded img-responsive" alt="{{ item.project_name }}" />
                             <h4 class="h4 p-h w-1">{{ item.project_name }}</h4>
                             <p class="y-1">{{ item.category }}</p>
                         </a>

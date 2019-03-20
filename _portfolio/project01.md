@@ -7,6 +7,4 @@ credits: Photography by Nathan Haymes
 cover: /assets/img/jedi.jpg
 category: Photoshoot
 project_name: Jedi in the Forest
-image_folder: jedi_shoot
-gallery_key: jedi
 ---
