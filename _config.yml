@@ -1,5 +1,4 @@
 destination: ./docs
-baseurl:
 collections:
   portfolio:
     output: true
