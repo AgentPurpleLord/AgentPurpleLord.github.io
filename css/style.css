@@ -1,5 +1,5 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Poppins:100,500,700,700i|Work+Sans:300,400,700&subset=devanagari,latin-ext');
-
+﻿@import url('../assets/font/aileron.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 /* Globals */
 
 html, body {
@@ -17,29 +17,34 @@ a {
 hr {
     border: 0;
     border-top: 1px solid #e7eaf3;
-}
-.row{
-    margin: 0 !important;
+    max-width: 50%;
 }
 /* Header Font */
 h1, h2, h3, h4, h5, h6 { 
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Aileron', Lato, Arial, Helvetica, sans-serif, Arial, sans-serif;
     line-height: 1.45em;
     text-decoration: none !important;
 }
 h1 {
-    font-size: 3.6em;
-    font-weight: 700;
+    font-size: 5.3em;
+    font-weight: 900;
+    letter-spacing: normal;
     text-transform: uppercase;
+}
+.thin {
+    font-weight: 500;
 }
 h2 {
-    font-size: 2.4em;
+    font-size: 1.3em;
     font-weight: 600;
     text-transform: uppercase;
+    line-height: 1.1em;
 }
 h3 {
-    font-size: 1.8em;
-    font-weight: 200;
+    font-family: 'Aileron', Arial, Helvetica, Arial, sans-serif;
+    font-size: 1.4em;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 h4 {
     font-size: 1.4em;
@@ -48,20 +53,20 @@ h4 {
 
 /* Body Font */
 p {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, Arial, sans-serif;
     font-size: 1.2em;
     font-weight: 400;
     line-height: 1.5em;
 }
 .lead {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Aileron', Lato, Arial, Helvetica, sans-serif, Arial, sans-serif;
     font-size: 1.8em;
     font-weight: 200;
 }
 .nav-link {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.3em;
-    font-weight: 800;
+    font-family: 'Roboto', Arial, Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: 900;
     font-style: italic;
     text-transform: uppercase;
     text-decoration: none;
@@ -85,9 +90,28 @@ section .nav-item {
 }
 
 /* Colors */
+.light { color: #F4F4F5 } /* Background for Dark-On-Light Designs or Text for Inverted */
+.light-accent { color: #94A7BA } /* Accents are used to bring attention to design elements */
+.primary { color: #FF523D } /* Wampa Red */
+.dark-accent { color: #B7716C }
+.dark { color: #00203E } /* Background for Light-On-Dark Designs or Text for Inverted */
+
+.bg-light { background: #F4F4F5 }
+.bg-light-accent { background: #94A7BA }
+.bg-primary { background: #FF523D }
+.bg-dark-accent { background: #B7716C }
+.bg-dark { background: #00203E !important }
+
+.f-light { fill: #F4F4F5 }
+.f-light-accent { fill: #94A7BA }
+.f-primary { fill: #FF523D }
+.f-dark-accent { fill: #B7716C }
+.f-dark { fill: #00203E }
+
 .bg-w { background: #f1f1f7}
 .bg-b { background: #07272D}
-.bg-blue { background: #254E70}
+.bg-blue { background: #1C638E}
+.fill-blue { fill: #1C638E }
 
 .r-1{ color: #FFEBEE }
 .r-2{ color: #FFCDD2 }
@@ -120,7 +144,6 @@ section .nav-item {
 .mb-4 { margin-bottom: 1.5rem !important;}
 .mb-5 { margin-bottom: 2rem !important; }
 .mb-6 { margin-bottom: 2.5rem !important; }
-.mx-1 { margin-right: 0.375rem; margin-left: 0.375rem;}
 
 /* Navagation Bars */
 .navbar {
@@ -128,7 +151,11 @@ section .nav-item {
     width: 100%;
     position: fixed;
     z-index: 99999;
-    padding: 2% 5%;
+    padding: 0 5%;
+    transition: all 0.6s ease-out;
+}
+.scrolled {
+    background: #00203E;
 }
 .white-bar {
     position: static;
@@ -148,7 +175,7 @@ section .nav-item {
 
 /* Navbar Navigation Links */
 .navbar ul a {
-    background-image: linear-gradient(#F5DD67, #F5DD67);
+    background-image: linear-gradient(#FF523D, #FF523D);
     background-position: 100% 100%;
     background-repeat: no-repeat;
     background-size: 0% 2px;
@@ -156,7 +183,7 @@ section .nav-item {
 }
 .navbar ul a:hover, a:focus {
     background-size: 100% 2px;
-    color: #F5DD67
+    color: #FF523D
 }
 .white-bar ul a {
     background-image: linear-gradient(#FF6F64, #FF6F64);
@@ -181,14 +208,14 @@ section .nav-item {
     justify-content: space-between;
     padding-top: 6rem;
 }
+.divider {
+    position: relative;
+}
 .divider svg {
     background: none !important;
     height: 6vw;
     overflow: hidden;
     vertical-align: middle;
-}
-.divider svg:not([class*='bg']) path {
-    fill: #1B1F3B;
 }
 .layer-1 {
     z-index: 1;
@@ -196,7 +223,9 @@ section .nav-item {
 .layer-2 {
     z-index: 2;
 }
-
+.layer-3 {
+    z-index: 3;
+}
 /* Logo */
 .logo {
     width: 75px;
@@ -258,8 +287,18 @@ section .nav-item {
     transition: all 350ms ease;
 }
 .hero-icons:hover .fa-instagram {
-    color: #F5DD67;
-    text-shadow: 0 0 15px #F5DD67;
+    color: #FF523D;
+    text-shadow: 0 0 15px #FF523D;
+    transition: all 350ms ease;
+}
+.footer-icons {
+    font-size: 40px;
+    padding: 10px 0 0 5px;
+    transition: all 350ms ease;
+}
+.footer-icons:hover .fa-instagram {
+    color: #FF523D;
+    text-shadow: 0 0 15px #FF523D;
     transition: all 350ms ease;
 }
 div.social-btn {
@@ -303,8 +342,8 @@ i {
 div.insta span {
     position: absolute;
     left: 0;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 100;
+    font-family: 'Aileron', sans-serif;
+    font-weight: 500;
     width: 100px;
     padding: 0px 17px;
     opacity: 0;
@@ -314,6 +353,7 @@ div.insta span {
     transition: all 0.6s ease-in;
     line-height: 110px;
     font-size: 20px;
+    text-transform: uppercase;
 }
 div.social-btn div:hover i {
     opacity: 0;
@@ -322,43 +362,61 @@ div.social-btn div:hover span {
     opacity: 1;
 }
 div.insta {
-    background: #833AB4;
+    background: #F4F4F5;
     -moz-box-shadow: 0px 4px 0px #1e469d;
     -webkit-box-shadow: 0px 4px 0px #1e469d;
-    box-shadow: 0px 4px 0px #5851D8;
+    box-shadow: 0px 4px 0px #94A7BA;
     position: relative;
 }
 
 /* Content Sections */
+.card-round {
+    border-radius: 0.625rem !important;
+    box-shadow: 0 4px 25px 0px rgba(0,0,0,0.56);
+}
+.card-content {
+    padding: 20px;
+}
 .hero {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    height: 90%;
+    height: 80vh;
     width: 100%;
-    position: relative;
-    background-image: url('../assets/img/jedi.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     padding: 0px 10%;
     margin: 0px auto;
-    text-shadow: 2px 2px 12px #1e1e22;
+    text-shadow: 1px 1px 2px #00203E;
 }
-.section {
+.bg-image {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.has-divider {
+    padding: 0;
+}
+.p-0 {
+    padding: 0 !important;
+}
+section {
     width: 100%;
     height: auto;
+    position: relative;
 }
 .about {
     padding: 75px 100px 50px 100px;
 }
 .services {
-    padding: 25px 100px 75px 100px;
+    padding: 25px 25px 75px 25px;
     position: relative;
 }
 .about .div-img-bg {
-    border: 20px solid #F5DD67;
+    border: 20px solid #FF523D;
     padding-bottom: 30px;
 }
 .about .div-img-bg .about-img img {
@@ -376,7 +434,6 @@ div.insta {
     position: relative;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
 }
 .portfolio-filter {
     width: auto;
@@ -404,18 +461,10 @@ div.insta {
 }
 #footer {
     width: 100%;
-    background-color: #FFD166;
     padding: 50px 0;
 }
 #footer .container-fluid {
     padding-bottom: 40px;
-}
-#footer p {
-    font-size: 12px;
-    letter-spacing: 0.1em;
-    font-weight: 500;
-    color: #1e1e22;
-    text-transform: uppercase;
 }
 .w-40 {
     width: 40% !important;
@@ -436,7 +485,11 @@ div.insta {
         max-width: 720px;
     }
     h1 {
-        font-size: 1.7em;
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1em;
+        line-height: 0.7em;
     }
     h3 {
         font-size: 1.3em;

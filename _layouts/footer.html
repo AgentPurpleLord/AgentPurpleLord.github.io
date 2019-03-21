@@ -4,19 +4,15 @@ layout: head
 <html>
 <body class="animsition">
     {{ content }}
-    <footer id="footer">
-        <div class="row d-flex justify-content-center">
-            <div class="social-btn">
-                <a rel="noopener" href="https://www.instagram.com/wampa_stomper/" aria-label="Instagram" target="_blank">
-                    <div class="social insta">
-                        <i class="fab fa-instagram fa-2x w-1"></i>
-                        <span class="w-1">Instagram</span>
-                    </div>
-                </a>
+    <footer id="footer" class="bg-dark">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <a rel="noopener" href="https://www.instagram.com/wampa_stomper/" aria-label="Instagram" target="_blank"><span class="footer-icons"><i class="fab fa-instagram light"></i></span></a>
             </div>
-        </div>
-        <div class="row justify-content-center">
-            <p>© COPYRIGHT DONT STEAL OMG</p>
+            <hr class="my-5" />
+            <div class="row justify-content-center">
+                <p class="light">© COPYRIGHT DONT STEAL OMG</p>
+            </div>
         </div>
     </footer>
     <script>
@@ -77,7 +73,24 @@ layout: head
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-        window.addEventListener('load',AOS.refresh)
+        window.addEventListener('load', AOS.refresh)
+    </script>
+    <script>
+        function checkScroll() {
+            var startY = $('.navbar').height() * 2; //The point where the navbar changes in px
+
+            if ($(window).scrollTop() > startY) {
+                $('.navbar').addClass("scrolled");
+            } else {
+                $('.navbar').removeClass("scrolled");
+            }
+        }
+
+        if ($('.navbar').length > 0) {
+            $(window).on("scroll load resize", function () {
+                checkScroll();
+            });
+        }
     </script>
 </body>
 </html>
