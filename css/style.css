@@ -17,7 +17,6 @@ a {
 hr {
     border: 0;
     border-top: 1px solid #e7eaf3;
-    max-width: 50%;
 }
 /* Header Font */
 h1, h2, h3, h4, h5, h6 { 
@@ -146,25 +145,34 @@ section .nav-item {
 .mb-6 { margin-bottom: 2.5rem !important; }
 
 /* Navagation Bars */
-.navbar {
+.nbar-gradient {
     background: linear-gradient(#1C638E -10%, 10%, rgba(0,0,0,0));
-    width: 100%;
-    position: fixed;
     z-index: 99999;
+    position: fixed;
+}
+.nbar-light {
+    position: static;
+    border-bottom: 1px solid rgba(27,31,59,0.08);
+    box-shadow: 0 1px 10px rgba(151, 164, 175, 0.1);
+    background: #F4F4F5;
+}
+.nbar-dark {
+    position: static;
+    background: #00203E;
+}
+.navbar {
+    width: 100%;
     padding: 0 5%;
-    transition: all 0.6s ease-out;
+    transition: all 350ms ease;
 }
 .scrolled {
     background: #00203E;
 }
-.white-bar {
-    position: static;
-    border-bottom: 1px solid rgba(27,31,59,0.08);
-    box-shadow: 0 1px 10px rgba(151, 164, 175, 0.1);
-    background: #f3f5fb;
+.navbar-toggler-icon-light {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(244, 244, 245, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+.navbar-toggler-icon-dark {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 32, 62, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
 .nav {
     padding: 50px;
@@ -174,25 +182,27 @@ section .nav-item {
 }
 
 /* Navbar Navigation Links */
-.navbar ul a {
+.nbar-gradient ul a, .nbar-dark ul a {
+    color: #F4F4F5;
     background-image: linear-gradient(#FF523D, #FF523D);
     background-position: 100% 100%;
     background-repeat: no-repeat;
     background-size: 0% 2px;
     transition: background-size .3s ease, color 350ms ease;
 }
-.navbar ul a:hover, a:focus {
+.nbar-gradient ul a:hover, a:focus, .nbar-dark ul a:hover, a:focus {
     background-size: 100% 2px;
     color: #FF523D
 }
-.white-bar ul a {
+.nbar-light ul a {
+    color: #003a70;
     background-image: linear-gradient(#FF6F64, #FF6F64);
     background-position: 100% 100%;
     background-repeat: no-repeat;
     background-size: 0% 2px;
     transition: background-size .3s ease, color 350ms ease;
 }
-.white-bar ul a:hover, a:focus {
+.nbar-light ul a:hover, a:focus {
     background-size: 100% 2px;
     color: #1C638E
 }
@@ -281,25 +291,17 @@ section .nav-item {
     font-size: 40px;
     padding-bottom: 15px;
 }
-.hero .fab {
+.fa-instagram {
     font-size: 40px;
     padding: 10px 0 0 5px;
-    transition: all 350ms ease;
+    background-image: linear-gradient(#FF523D, #FF523D);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
 }
-.hero-icons:hover .fa-instagram {
+.fa-instagram:hover, focus {
     color: #FF523D;
-    text-shadow: 0 0 15px #FF523D;
-    transition: all 350ms ease;
-}
-.footer-icons {
-    font-size: 40px;
-    padding: 10px 0 0 5px;
-    transition: all 350ms ease;
-}
-.footer-icons:hover .fa-instagram {
-    color: #FF523D;
-    text-shadow: 0 0 15px #FF523D;
-    transition: all 350ms ease;
+    transition: all 250ms ease;
 }
 div.social-btn {
     display: block;
@@ -372,7 +374,7 @@ div.insta {
 /* Content Sections */
 .card-round {
     border-radius: 0.625rem !important;
-    box-shadow: 0 4px 25px 0px rgba(0,0,0,0.56);
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
 .card-content {
     padding: 20px;
@@ -443,7 +445,10 @@ section {
     padding-top: 8rem;
 }
 .portfolio-page .container-fluid {
-    padding: 0px 60px;
+    padding: 0 6%;
+}
+.portfolio-heading {
+    font-size: 2.3em;
 }
 .rounded {
     margin-bottom: 1.5rem;
@@ -453,11 +458,13 @@ section {
     margin-bottom: 2.25rem;
 }
 .gallery {
-    background-color: #1B1F3B;
     padding-top: 3rem;
 }
 .social-media {
     display: inline-block;
+}
+.footer-hr {
+    max-width: 50%;
 }
 #footer {
     width: 100%;
@@ -479,7 +486,6 @@ section {
     }
     .navbar {
         width: 100%;
-        padding-top: 30px;
     }
     .container {
         max-width: 720px;
@@ -516,7 +522,10 @@ section {
         padding-top: 10px;
     }
     .nav-link {
-        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .portfolio-page .container-fluid {
+        padding: 0 3%;
     }
 }
 @media (max-width: 600px){
