@@ -2,3 +2,11 @@ url: https://wampastomper.com/
 collections:
   portfolio:
     output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "portfolio"
+    values:
+      nav-color: "nbar-light"
