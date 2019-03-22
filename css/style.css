@@ -54,7 +54,7 @@ h4 {
 }
 
 /* Body Font */
-p {
+p, .p {
     font-family: 'Roboto', Arial, Helvetica, Arial, sans-serif;
     font-size: 1.2em;
     font-weight: 400;
