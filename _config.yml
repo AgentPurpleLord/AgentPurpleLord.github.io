@@ -2,6 +2,7 @@ url: https://wampastomper.com/
 collections:
   portfolio:
     output: true
+    permalink: /pages/gallery/:title/
 
 defaults:
   -
