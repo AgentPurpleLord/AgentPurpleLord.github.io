@@ -43,12 +43,12 @@ A few of the goals with the website:
 </p>
 
 ## Colors
-- ![#F4F4F5](https://placehold.it/15/F4F4F5/000000?text=+) `#F4F4F5`
-- ![#94A7BA](https://placehold.it/15/94A7BA/000000?text=+) `#94A7BA`
-- ![#FF523D](https://placehold.it/15/FF523D/000000?text=+) `#FF523D`
-- ![#B7716C](https://placehold.it/15/B7716C/000000?text=+) `#B7716C`
-- ![#00203E](https://placehold.it/15/00203E/000000?text=+) `#00203E`
-- ![#1C638E](https://placehold.it/15/1C638E/000000?text=+) `#1C638E`
+- ![#F4F4F5](https://placehold.it/15/F4F4F5/000000?text=+) `#F4F4F5` `rgba(244, 244, 245, 1)`
+- ![#94A7BA](https://placehold.it/15/94A7BA/000000?text=+) `#94A7BA` `rgba(148, 167, 186, 1)`
+- ![#FF523D](https://placehold.it/15/FF523D/000000?text=+) `#FF523D` `rgba(255, 82, 61, 1)`
+- ![#B7716C](https://placehold.it/15/B7716C/000000?text=+) `#B7716C` `rgba(183, 113, 108, 1)`
+- ![#00203E](https://placehold.it/15/00203E/000000?text=+) `#00203E` `rgba(0, 32, 62, 1)`
+- ![#1C638E](https://placehold.it/15/1C638E/000000?text=+) `#1C638E` `rgba(28, 99, 142, 1)`
 
 ## Feedback
 
