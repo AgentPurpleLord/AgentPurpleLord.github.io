@@ -49,6 +49,9 @@ h4 {
     font-size: 1.4em;
     font-weight: 400;
 }
+.list-head{
+    font-weight: 700;
+}
 
 /* Body Font */
 p {
@@ -247,7 +250,7 @@ section .nav-item {
 .btn {
     display: inline-block;
     font-weight: 500;
-    color: #495057;
+    color: #B7716C;
     text-align: center;
     vertical-align: middle;
     -webkit-user-select: none;
@@ -271,11 +274,24 @@ section .nav-item {
     align-items: center;
     justify-content: center;
 }
+.btn-text {
+    border-radius: 1rem;
+    width: 10.0rem;
+    height: 3.0rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .btn.btn-primary * { fill: #f1f1f7; }
 .btn-primary {
     color: #f1f1f7;
-    background-color: #6A9DD6;
-    border-color: #6A9DD6;
+    background-color: #FF523D;
+    border-color: #FF523D;
+}
+.btn-primary:hover {
+    background-color: #94A7BA;
+    border-color: #94A7BA;
 }
 .icon {
     flex-shrink: 0;
@@ -291,15 +307,15 @@ section .nav-item {
     font-size: 40px;
     padding-bottom: 15px;
 }
-.fa-instagram {
+i[class*="fa-"] {
     font-size: 40px;
-    padding: 10px 0 0 5px;
+    padding: 15px;
     background-image: linear-gradient(#FF523D, #FF523D);
     background-position: 100% 100%;
     background-repeat: no-repeat;
     background-size: 0% 2px;
 }
-.fa-instagram:hover, focus {
+i[class*="fa-"]:hover, focus {
     color: #FF523D;
     transition: all 250ms ease;
 }
