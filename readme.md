@@ -14,7 +14,8 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Goals](#Goals)
+- [Goals](#goals)
+- [Colors](#colors)
 - [Feedback](#feedback)
 
 
@@ -40,6 +41,14 @@ A few of the goals with the website:
 <p align="center">
   <img src = "https://i.gyazo.com/914656ad93b2674245f90c9da29e9abb.jpg" width=700>
 </p>
+
+## Colors
+- ![#F4F4F5](https://placehold.it/150/F4F4F5/000000?text=+) `#F4F4F5`
+- ![#94A7BA](https://placehold.it/150/94A7BA/000000?text=+) `#94A7BA`
+- ![#FF523D](https://placehold.it/150/FF523D/000000?text=+) `#FF523D`
+- ![#B7716C](https://placehold.it/150/B7716C/000000?text=+) `#B7716C`
+- ![#00203E](https://placehold.it/150/00203E/000000?text=+) `#00203E`
+- ![#1C638E](https://placehold.it/150/1C638E/000000?text=+) `#1C638E`
 
 ## Feedback
 
