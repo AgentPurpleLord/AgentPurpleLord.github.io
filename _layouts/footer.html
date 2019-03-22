@@ -8,10 +8,14 @@ layout: head
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <a rel="noopener" href="https://www.instagram.com/wampa_stomper/" aria-label="Instagram" target="_blank"><span class="footer-icons"><i class="fab fa-instagram light"></i></span></a>
+                <a rel="noopener" href="https://github.com/AgentPurpleLord/WampaStomper.github.io" aria-label="GitHub" target="_blank"><span class="footer-icons"><i class="fab fa-github light"></i></i></span></a>
             </div>
             <hr class="my-5 footer-hr" />
             <div class="row justify-content-center">
                 <p class="light">© COPYRIGHT DONT STEAL OMG</p>
+            </div>
+            <div class="row justify-content-center bug-report my-3">
+                <a href="https://github.com/AgentPurpleLord/WampaStomper.github.io/issues/new/choose" target="_blank" class="btn btn-text btn-primary mx-1 animsition-link">Report an Issue</a>
             </div>
         </div>
     </footer>
@@ -42,8 +46,8 @@ layout: head
     <script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
-    <script src="../js/iso.js"></script>
-    <script src="../js/animsition.min.js"></script>
+    <script src="{{ site.url }}/js/iso.js"></script>
+    <script src="{{ site.url }}/js/animsition.min.js"></script>
     <script>
         $(document).ready(function () {
             $(".animsition").animsition({
@@ -92,5 +96,6 @@ layout: head
             });
         }
     </script>
+    {% include lazyload.html %}
 </body>
 </html>
