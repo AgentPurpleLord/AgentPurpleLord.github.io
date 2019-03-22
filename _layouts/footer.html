@@ -19,26 +19,6 @@ layout: head
             </div>
         </div>
     </footer>
-    <script>
-        progressively.init({
-            delay: 50,
-            throttle: 300,
-            smBreakpoint: 600,
-            onLoad: function (elem) {
-                console.log(elem);
-            },
-            onLoadComplete: function () {
-                console.log('All images have finished loading!');
-            }
-        });
-    </script>
-    <!-- <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js');
-            });
-        }
-    </script>-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
