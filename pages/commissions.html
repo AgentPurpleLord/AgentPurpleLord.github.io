@@ -1,0 +1,71 @@
+---
+layout: page-dark
+title: Commissions
+description: How Commissions Work
+nav-color: nbar-dark
+steps:
+  - name: Sewing
+    icon: fas fa-magic
+    card-short: Some quick example text to build on the card title and make up the bulk of the card's content.
+    header: Change the way you build wesites. Forever.
+    body: With you get components and examples, including tons of variables that will help you customize this theme with ease.
+  - name: Sewing
+    icon: fas fa-magic
+    card-short: Some quick example text to build on the card title and make up the bulk of the card's content.
+    header: Change the way you build wesites. Forever.
+    body: With you get components and examples, including tons of variables that will help you customize this theme with ease.
+  - name: Sewing
+    icon: fas fa-magic
+    card-short: Some quick example text to build on the card title and make up the bulk of the card's content.
+    header: Change the way you build wesites. Forever.
+    body: With you get components and examples, including tons of variables that will help you customize this theme with ease.
+  - name: Sewing
+    icon: fas fa-magic
+    card-short: Some quick example text to build on the card title and make up the bulk of the card's content.
+    header: Change the way you build wesites. Forever.
+    body: With you get components and examples, including tons of variables that will help you customize this theme with ease.
+---
+<section class="pb-300">
+    <span class="padder"></span>
+</section>
+<section class="card-slice bg-light">
+    <div class="container height-custom">
+        <div class="row">
+            {% for item in page.steps %}
+            <div class="col-lg-3 mt--200">
+                <div class="card hover-translate-y-n10 hover-shadow-lg">
+                    <div class="px-4 py-5">
+                        <i class="h1 {{ item.icon }}"></i>
+                    </div>
+                    <div class="px-4 pb-5">
+                        <h5>{{ item.name }}</h5>
+                        <p class="text-muted">{{ item.card-short }}</p>
+                        <a href="#" class="p animsition-link link-underline-primary">Find out more</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section class="process">
+    {% for item in page.steps %}
+        <div class="section-process-step">
+            <div class="container">
+                <div class="row row-grid align-items-center justify-content-between">
+                    <div class="col-xl-5 col-lg-6 {% cycle 'order-lg-2', 'order-lg-1' %}">
+                        <div class="pr-md-4">
+                            <span class="p badge badge-red-white badge-pill">{{ item.name }}</span>
+                            <h3 class="mt-4">{{ item.header }}</h3>
+                            <p class="lead">{{ item.body }}</p>
+                            <a href="#" class="btn btn-text btn-primary mx-1 animsition-link p">Get In Touch</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 {% cycle 'order-lg-1', 'order-lg-2' %}">
+                        <img alt="placeholder" src="https://via.placeholder.com/920x1100" class="img-center img-fluid rounded-lg shadow-lg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</section>
