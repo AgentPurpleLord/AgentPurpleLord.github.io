@@ -2,7 +2,7 @@
 layout: portfolio
 category: Photoshoot
 project_name: Fallout
-cover_image: assets/img/DSC_2382.jpg
+cover_image: assets/img/DSC_1736.jpg
 character: Vault Dweller
 location: National Steam Centre
 description: ''
