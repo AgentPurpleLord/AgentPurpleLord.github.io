@@ -12,5 +12,6 @@ gallery:
 - assets/img/drink.jpg
 - assets/img/jedi.jpg
 date: 2019-03-20 06:17:58 +0000
+published: false
 
 ---

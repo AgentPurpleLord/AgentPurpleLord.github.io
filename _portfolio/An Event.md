@@ -12,5 +12,6 @@ gallery:
 - assets/img/jedi.jpg
 - assets/img/box.jpg
 date: 2019-03-20 06:19:00 +0000
+published: false
 
 ---
