@@ -1,10 +1,20 @@
 ﻿@import url('../assets/font/aileron.css');
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
 /* Globals */
+:root {
+    --light-color: hsla(240, 5%, 96%, 1); /* Background for Dark-On-Light Designs or Text for Inverted */
+    --light-accent: hsla(210, 22%, 65%, 1); /* Accents are used to bring attention to design elements */
+    --primary-color: hsla(6, 100%, 62%, 1); /* Wampa Red */
+    --secondary-color: hsla(203, 67%, 33%, 1); /* Wampa Blue */
+    --dark-accent: hsla(4, 34%, 57%, 1); /* Accents are used to bring attention to design elements */
+    --dark-color: hsla(209, 100%, 12%, 1); /* Background for Light-On-Dark Designs or Text for Inverted */
+}
 
 html, body {
-    font-size: 10pt; /* All Fonts use em based on multiples of 10 */
-    line-height: 10pt;
     height: 100%;
     width: 100%;
 }
@@ -14,59 +24,85 @@ hr {
     border: 0;
     border-top: 1px solid #e7eaf3;
 }
+
+/* Font Sizes */
+
 /* Header Font */
-h1, h2, h3, h4, h5, h6 { 
-    font-family: 'Aileron', Lato, Arial, Helvetica, sans-serif, Arial, sans-serif;
-    line-height: 1.45em;
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Inter', Lato, Arial, Helvetica, sans-serif, Arial, sans-serif;
     text-decoration: none !important;
+    margin: 0;
 }
-h1 {
-    font-size: 5.3em;
+h1, .h1 {
+    font-size: 4.5rem;
     font-weight: 900;
     letter-spacing: normal;
     text-transform: uppercase;
 }
 .thin { font-weight: 500; }
-h2 {
-    font-size: 1.3em;
+h2, .h2 {
+    font-size: 3.75rem;
     font-weight: 600;
     text-transform: uppercase;
     line-height: 1.1em;
 }
-h3 {
-    font-family: 'Aileron', Arial, Helvetica, Arial, sans-serif;
-    font-size: 1.4em;
-    font-weight: 500;
+h3, .h3 {
+    font-family: 'Inter', Arial, Helvetica, Arial, sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
     text-transform: uppercase;
 }
-h4 {
-    font-size: 1.4em;
+h4, .h4 {
+    font-size: 2.25rem;
     font-weight: 400;
+}
+h5, .h5 {
+    font-size: 1.875rem;
+}
+h6, .h6 {
+    font-size: 1.125rem;
+    font-weight: 800;
 }
 .list-head{ font-weight: 700; }
-
+.baseline { align-items: baseline; }
 /* Body Font */
-p, .p {
-    font-family: 'Roboto', Arial, Helvetica, Arial, sans-serif;
-    font-size: 1.2em;
-    font-weight: 400;
-    line-height: 1.5em;
-}
+.lh-10 { line-height: 10px;}
+.lh-15 { line-height: 15px;}
+.lh-20 { line-height: 20px;}
+.lh-25 { line-height: 25px;}
+.lh-30 { line-height: 30px;}
+.lh-35 { line-height: 35px;}
+
 .lead {
-    font-family: 'Aileron', Lato, Arial, Helvetica, sans-serif, Arial, sans-serif;
-    font-size: 1.8em;
-    font-weight: 200;
+    font-family: 'Inter', Lato, Arial, Helvetica, sans-serif, Arial, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+p, .p {
+    font-family: 'Inter', Arial, Helvetica, Arial, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin: 0;
+}
+.small-font {
+    font-size: 1rem;
+}
+.xsmall-font {
+    font-size: 0.875rem;
+}
+.tiny-font {
+    font-size: 0.75rem;
 }
 .nav-link {
-    font-family: 'Roboto', Arial, Helvetica, Arial, sans-serif;
-    font-size: 1.5em;
+    font-family: 'Inter', Arial, Helvetica, Arial, sans-serif;
+    font-size: 24px;
     font-weight: 900;
     font-style: italic;
     text-transform: uppercase;
     text-decoration: none;
 }
 .sub-link {
-    font-size: 1.3em;
+    font-size: 18px;
     font-weight: 500;
     text-decoration: none !important;
     padding: 0px 20px;
@@ -95,14 +131,6 @@ section .nav-item { transition: opacity 0.2s linear; }
 }
 
 /* Colors */
-:root {
-    --light-color: hsla(240, 5%, 96%, 1); /* Background for Dark-On-Light Designs or Text for Inverted */
-    --light-accent: hsla(210, 22%, 65%, 1); /* Accents are used to bring attention to design elements */
-    --primary-color: hsla(6, 100%, 62%, 1); /* Wampa Red */
-    --secondary-color: hsla(203, 67%, 33%, 1); /* Wampa Blue */
-    --dark-accent: hsla(4, 34%, 57%, 1); /* Accents are used to bring attention to design elements */
-    --dark-color: hsla(209, 100%, 12%, 1); /* Background for Light-On-Dark Designs or Text for Inverted */
-}
 .light { color: var(--light-color); } 
 .light-accent { color: var(--light-accent); }
 .primary { color: var(--primary-color); } 
@@ -341,7 +369,9 @@ i[class*="fa-"]:hover, focus {
     z-index: 0;
     mix-blend-mode: multiply;
 }
-.has-divider { padding: 0; }
+.has-divider { 
+    padding: 0;
+}
 .p-0 { padding: 0 !important; }
 section {
     width: 100%;
@@ -350,7 +380,7 @@ section {
 }
 .about { padding: 75px 100px 50px 100px; }
 .services {
-    padding: 25px 25px 75px 25px;
+    padding: 25px 100px 75px 100px;
     position: relative;
 }
 .about .div-img-bg {
@@ -470,33 +500,31 @@ section {
     .padding-100 {
         padding: 0px 5px;
     }
-
     .lead {
         font-size: 1.5em;
     }
-
     .navbar {
         width: 100%;
     }
-
     .container {
         max-width: 720px;
     }
-
-    h1 {
-        font-size: 2em;
+    h2 , .h2 {
+        font-size: 1.4rem;
     }
-
-    h2 {
-        font-size: 1em;
-        line-height: 0.7em;
+    h1, .h1 {
+        font-size: 1.4rem;
     }
-
-    h3 {
-        font-size: 1.3em;
-        font-weight: 400;
+    h5, .h5 {
+        font-size: 0.8rem;
     }
-
+    h3, .h3 {
+        font-size: 1rem;
+    }
+    .p, p, .lead {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
     .about .div-img-bg {
         padding: 0;
     }
@@ -509,15 +537,11 @@ section {
             margin-top: 0%;
             margin-left: calc(0% - 0px);
         }
-
-    .container-fluid {
-        padding: 20px;
-    }
-
     .services {
         padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
-
     .about {
         padding-top: 10px;
     }

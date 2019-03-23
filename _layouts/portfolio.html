@@ -6,7 +6,7 @@ permalink: pretty
     <div class="container-fluid">
         <div class="row">
             <div class="col-xl-5 col-lg-5 order-lg-2">
-                <div class="row justify-content sticky-top portfolio-info">
+                <div class="row justify-content sticky-top portfolio-info baseline">
                     <div class="col-lg-12">
                         <div class="mb-6">
                             <div class="back-to-button my-3">
@@ -15,11 +15,11 @@ permalink: pretty
                             <h1 class="portfolio-heading dark">{{ page.project_name }}</h1>
                             <p class="mb-1">{{ page.description }}</p>
                         </div>
-                        <hr class="mb-5" />
+                        <hr class="mb-5 mt-5" />
                         <ul class="list-unstyled">
-                            <li class="media mb-1">
+                            <li class="media mb-1 pt-3">
                                 <div class="d-flex w-40 w-sm-30">
-                                    <h4 class="dark list-head">Character</h4>
+                                    <h4 class="h6 dark list-head">Character</h4>
                                 </div>
                                 <div class="media-body">
                                     <p class="text-muted">
@@ -27,9 +27,9 @@ permalink: pretty
                                     </p>
                                 </div>
                             </li>
-                            <li class="media mb-1">
+                            <li class="media mb-1 pt-3">
                                 <div class="d-flex w-40 w-sm-30">
-                                    <h4 class="dark list-head">Location</h4>
+                                    <h4 class="h6 dark list-head">Location</h4>
                                 </div>
                                 <div class="media-body">
                                     <p class="text-muted">
@@ -37,9 +37,9 @@ permalink: pretty
                                     </p>
                                 </div>
                             </li>
-                            <li class="media mb-1">
+                            <li class="media mb-1 pt-3">
                                 <div class="d-flex w-40 w-sm-30">
-                                    <h4 class="dark list-head">Credits</h4>
+                                    <h4 class="h6 dark list-head">Credits</h4>
                                 </div>
                                 <div class="media-body">
                                     <p class="text-muted">
@@ -48,12 +48,9 @@ permalink: pretty
                                 </div>
                             </li>
                         </ul>
-                        <hr />
+                        <hr class="mb-5 mt-5" />
 
-                        <div class="media mb-5">
-                            <div class="d-flex w-40 w-sm-30">
-                                <h4 class="dark list-head">Share:</h4>
-                            </div>
+                        <div class="media mb-4">
                             {% capture url_path %}{{site.url}}{{page.url}}{% endcapture %}
                             <div class="media-body">
                                 <ul class="list-inline">
