@@ -61,8 +61,8 @@ fields:
   label: gallery
   description: The images that show up inside the page.
 pages:
-- _portfolio/My WIP.md
 - _portfolio/Fallout.md
+- _portfolio/My WIP.md
 - _portfolio/Kikisdeliveryservice.md
 - _portfolio/An Event.md
 - _portfolio/AnExampleProject.md
