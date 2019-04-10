@@ -84,7 +84,7 @@ steps:
 <script src="{{ site.url }}/js/form.js"></script>
 
 <section class="contact-form">
-    <form action="https://www.formingo.co/submit/466edcee-7685-4626-b68b-9df0fbf8df30" method="POST">
+    <form action="https://www.formingo.co/submit/466edcee-7685-4626-b68b-9df0fbf8df30" method="POST" id="commissionsForm">
         <div class="form-title">
             <h2>Tell me about your idea</h2>
             <p class="lead">Whether you have questions or you would just like to say hello, contact us.</p>
@@ -103,19 +103,19 @@ steps:
         </div>
         <div class="form-group" id="email-div">
             <label class="p" for="contactInfoEmail">Your Email</label>
-            <input type="email" class="form-control" id="email" placeholder="xXJediXx420@theForce.com" />
+            <input type="email" name="email" class="form-control" id="email" placeholder="xXJediXx420@theForce.com" />
         </div>
         <div class="form-group" id="phone-div">
             <label class="p" for="contactInfoPhone">Your Phone Number</label>
-            <input type="tel" class="form-control" id="phone" placeholder="0420800800" />
+            <input type="tel" name="phone" class="form-control" id="phone" placeholder="0420800800" />
         </div>
         <div class="form-group" id="facebook-div">
             <label class="p" for="contactInfoFacebook">Link me your profile!</label>
-            <input type="url" class="form-control" id="facebook" placeholder="https://www.facebook.com/NotABountyHunter" />
+            <input type="url" name="facebook" class="form-control" id="facebook" placeholder="https://www.facebook.com/NotABountyHunter" />
         </div>
         <div class="form-group" id="project-input">
             <label class="form-label p">Tell me briefly about your project</label>
-            <textarea class="form-control" id="projectoutline" rows="6" maxlength="400"></textarea>
+            <textarea class="form-control" name="project" id="projectoutline" rows="6" maxlength="400" form="commissionsForm"></textarea>
         </div>
         <button type="submit" class="btn btn-primary p submit-button">You may fire when ready</button>
     </form>
