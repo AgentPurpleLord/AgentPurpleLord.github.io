@@ -276,6 +276,15 @@ section .nav-item { transition: opacity 0.2s linear; }
     align-items: center;
     justify-content: center;
 }
+.submit-button {
+    border-radius: 1rem;
+    width: 15.0rem;
+    height: 3.0rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .btn.btn-primary * { fill: #f1f1f7; }
 .btn-primary {
     color: #f1f1f7;
@@ -478,7 +487,7 @@ section {
 
 /** Forms */
 .contact-form {
-    padding: 5rem 40rem;
+    padding: 5% 20%;
     background: var(--light-color);
 }
 
@@ -497,6 +506,8 @@ section {
 .form-group textarea{
     resize: none;
 }
+
+
 
 @media (min-width: 992px) {
     .mt--200 {
@@ -519,6 +530,16 @@ section {
     }
 }
 @media (max-width: 768px) {
+    .process {
+        padding: 0 10%;
+    }
+    .card {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    .card-slice {
+        padding-bottom: 10px;
+    }
     .padding-100 {
         padding: 0px 5px;
     }

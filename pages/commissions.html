@@ -25,11 +25,18 @@ steps:
     header: Change the way you build wesites. Forever.
     body: With you get components and examples, including tons of variables that will help you customize this theme with ease.
 ---
+<script src="../js/jquery.localScroll.min.js" type="text/javascript"></script>
+<script src="../js/jquery.scrollTo.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#nav-cards').localScroll({ duration: 800, offset: -100 });
+    });
+</script>
 <section class="pb-300">
     <span class="padder"></span>
 </section>
 <section class="card-slice bg-light">
-    <div class="container height-custom">
+    <div class="container height-custom" id="nav-cards">
         <div class="row">
             {% for item in page.steps %}
             <div class="col-lg-3 mt--200">
@@ -40,7 +47,7 @@ steps:
                     <div class="px-4 pb-5">
                         <h5>{{ item.name }}</h5>
                         <p class="text-muted">{{ item.card-short }}</p>
-                        <a href="#" class="p animsition-link link-underline-primary">Find out more</a>
+                        <a href="#{{ item.name }}" class="p link-underline-primary">Find out more</a>
                     </div>
                 </div>
             </div>
@@ -51,14 +58,14 @@ steps:
 <section class="process">
     {% for item in page.steps %}
         <div class="section-process-step">
+            <a name="{{ item.name }}"></a>
             <div class="container">
                 <div class="row row-grid align-items-center justify-content-between">
                     <div class="col-xl-5 col-lg-6 {% cycle 'order-lg-2', 'order-lg-1' %}">
                         <div class="pr-md-4">
                             <span class="p badge badge-red-white badge-pill">{{ item.name }}</span>
                             <h3 class="mt-4">{{ item.header }}</h3>
-                            <p class="lead">{{ item.body }}</p>
-                            <a href="#" class="btn btn-text btn-primary mx-1 animsition-link p">Get In Touch</a>
+                            <p class="lead mb-4">{{ item.body }}</p>
                         </div>
                     </div>
                     <div class="col-lg-5 {% cycle 'order-lg-1', 'order-lg-2' %}">
@@ -75,38 +82,40 @@ steps:
     </div>
 </section>
 <script src="{{ site.url }}/js/form.js"></script>
-<section class="contact-form">
-    <div class="form-title">
-        <h2>Tell me about your idea</h2>
-        <p class="lead">Whether you have questions or you would just like to say hello, contact us.</p>
-    </div>
-    <div class="form-group" id="name-input">
-        <label class="p">Your Name<span class="text-danger">*</span></label>
-        <input type="text" class="form-control" name="name" placeholder="Jack Wayley" required data-msg="Please enter your name." data-error-class="form-error" data-success-class="form-success" />
-    </div>
-    <div class="form-group">
-        <label class="p" for="contactPreferences">How would you like me to get in touch?</label>
-        <select class="form-control" id="contactPreferences">
-            <option value="email">Via Email</option>
-            <option value="phone">Via Phone</option>
-            <option value="facebook">Via Facebook</option>
-        </select>
-    </div>
-    <div class="form-group" id="email-div">
-        <label class="p" for="contactInfoEmail">Your Email</label>
-        <input type="email" class="form-control" id="email" placeholder="xXJediXx420@theForce.com" />
-    </div>
-    <div class="form-group" id="phone-div">
-        <label class="p" for="contactInfoPhone">Your Phone Number</label>
-        <input type="tel" class="form-control" id="phone" placeholder="0420800800" />
-    </div>
-    <div class="form-group" id="facebook-div">
-        <label class="p" for="contactInfoFacebook">Link me your profile!</label>
-        <input type="url" class="form-control" id="facebook" placeholder="https://www.facebook.com/NotABountyHunter" />
-    </div>
-    <div class="form-group" id="project-input">
-        <label class="form-label p">Tell me briefly about your project</label>
-        <textarea class="form-control" id="projectoutline" rows="6" maxlength="400"></textarea>
-    </div>
-    <button type="submit" class="btn btn-text btn-primary mx-1 p">You may fire when ready</button>
-</section>
+<form action="https://www.elformo.com/forms/658bda17-67ac-449b-8890-6ef7ab314e0b" method="post" accept-charset="UTF-8">
+    <section class="contact-form">
+        <div class="form-title">
+            <h2>Tell me about your idea</h2>
+            <p class="lead">Whether you have questions or you would just like to say hello, contact us.</p>
+        </div>
+        <div class="form-group" id="name-input">
+            <label class="p">Your Name<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" name="name" placeholder="Jack Wayley" required data-msg="Please enter your name." data-error-class="form-error" data-success-class="form-success" />
+        </div>
+        <div class="form-group">
+            <label class="p" for="contactPreferences">How would you like me to get in touch?</label>
+            <select class="form-control" id="contactPreferences">
+                <option value="email">Via Email</option>
+                <option value="phone">Via Phone</option>
+                <option value="facebook">Via Facebook</option>
+            </select>
+        </div>
+        <div class="form-group" id="email-div">
+            <label class="p" for="contactInfoEmail">Your Email</label>
+            <input type="email" class="form-control" id="email" placeholder="xXJediXx420@theForce.com" />
+        </div>
+        <div class="form-group" id="phone-div">
+            <label class="p" for="contactInfoPhone">Your Phone Number</label>
+            <input type="tel" class="form-control" id="phone" placeholder="0420800800" />
+        </div>
+        <div class="form-group" id="facebook-div">
+            <label class="p" for="contactInfoFacebook">Link me your profile!</label>
+            <input type="url" class="form-control" id="facebook" placeholder="https://www.facebook.com/NotABountyHunter" />
+        </div>
+        <div class="form-group" id="project-input">
+            <label class="form-label p">Tell me briefly about your project</label>
+            <textarea class="form-control" id="projectoutline" rows="6" maxlength="400"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary p submit-button">You may fire when ready</button>
+    </section>
+</form>
