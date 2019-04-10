@@ -57,23 +57,23 @@ steps:
 </section>
 <section class="process">
     {% for item in page.steps %}
-        <div class="section-process-step">
-            <a name="{{ item.name }}"></a>
-            <div class="container">
-                <div class="row row-grid align-items-center justify-content-between">
-                    <div class="col-xl-5 col-lg-6 {% cycle 'order-lg-2', 'order-lg-1' %}">
-                        <div class="pr-md-4">
-                            <span class="p badge badge-red-white badge-pill">{{ item.name }}</span>
-                            <h3 class="mt-4">{{ item.header }}</h3>
-                            <p class="lead mb-4">{{ item.body }}</p>
-                        </div>
+    <div class="section-process-step">
+        <a name="{{ item.name }}"></a>
+        <div class="container">
+            <div class="row row-grid align-items-center justify-content-between">
+                <div class="col-xl-5 col-lg-6 {% cycle 'order-lg-2', 'order-lg-1' %}">
+                    <div class="pr-md-4">
+                        <span class="p badge badge-red-white badge-pill">{{ item.name }}</span>
+                        <h3 class="mt-4">{{ item.header }}</h3>
+                        <p class="lead mb-4">{{ item.body }}</p>
                     </div>
-                    <div class="col-lg-5 {% cycle 'order-lg-1', 'order-lg-2' %}">
-                        <img alt="placeholder" src="https://via.placeholder.com/920x1100" class="img-center img-fluid rounded-lg shadow-lg" />
-                    </div>
+                </div>
+                <div class="col-lg-5 {% cycle 'order-lg-1', 'order-lg-2' %}">
+                    <img alt="placeholder" src="https://via.placeholder.com/920x1100" class="img-center img-fluid rounded-lg shadow-lg" />
                 </div>
             </div>
         </div>
+    </div>
     {% endfor %}
 </section>
 <section class="contact-details">
@@ -82,9 +82,8 @@ steps:
     </div>
 </section>
 <script src="{{ site.url }}/js/form.js"></script>
-
-<section class="contact-form">
-    <form action="https://www.formingo.co/submit/466edcee-7685-4626-b68b-9df0fbf8df30" method="POST">
+<form action="https://www.formingo.co/submit/466edcee-7685-4626-b68b-9df0fbf8df30" method="POST">
+    <section class="contact-form">
         <div class="form-title">
             <h2>Tell me about your idea</h2>
             <p class="lead">Whether you have questions or you would just like to say hello, contact us.</p>
@@ -115,8 +114,8 @@ steps:
         </div>
         <div class="form-group" id="project-input">
             <label class="form-label p">Tell me briefly about your project</label>
-            <textarea class="form-control" name="project" id="projectoutline" rows="6" maxlength="400" ></textarea>
+            <textarea class="form-control" name="project" id="projectoutline" rows="6" maxlength="400"></textarea>
         </div>
         <button type="submit" class="btn btn-primary p submit-button">You may fire when ready</button>
-    </form>
-</section>
+    </section>
+</form>
